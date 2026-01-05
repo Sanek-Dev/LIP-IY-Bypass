@@ -107,6 +107,9 @@ CurrentCamera:GetPropertyChangedSignal("CameraType"):Connect(function()
 end)
 CurrentCamera.CameraType = Enum.CameraType.Track
 LocalPlayer.CameraMaxZoomDistance = 100
+LocalPlayer:GetPropertyChangedSignal("CameraMaxZoomDistance"):Connect(function()
+    LocalPlayer.CameraMaxZoomDistance = 100
+end)
 
 print("[Anti-LIP-AC] Initialized!")
 
